@@ -1,3 +1,177 @@
+:root {
+  --primary-color: #e50914;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  border-bottom: #222 solid 8px;
+}
 body {
-  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  background: black;
+  color: white;
+  /* min-height: 2000px; */
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+ul {
+  list-style: none;
+}
+h1 {
+  font-size: 48px;
+  margin-bottom: 2rem;
+}
+p {
+  margin: 0.5rem 0;
+  line-height: 1.5rem;
+  font-size: 18px;
+}
+.break {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+img {
+  width: 15%;
+  height: 10%;
+}
+.top {
+  position: relative;
+  color: black;
+}
+.top a {
+  padding-top: 1.4rem;
+  /* position: absolute; */
+  display: inline-block;
+  float: right;
+  padding-right: 1.5rem;
+}
+.top img {
+  position: relative;
+  padding-left: 0.5rem;
+  min-height: 75px;
+  min-width: 160px;
+}
+.content {
+  padding-top: 1rem;
+  text-align: center;
+  line-height: 50px;
+  /* height: 100vh; */
+}
+.showcase {
+  background: url("/Resources/Background.jpg") center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("/Resources/Background.jpg") center/cover;
+  width: 100%;
+  height: 100vh;
+  /* position: relative; */
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #ff535c;
+}
+.button {
+  background-color: #e50914;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  width: auto;
+  box-shadow: 0 0.1px 0 rgba(0, 0, 0, 0.45);
+  transition: 0.5s;
+}
+.button-sign {
+  margin-right: 1rem;
+  font-size: 16px;
+  padding: 0.4rem 1.2rem;
+  margin-top: -0.1em;
+}
+.button-gs {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  padding: 0 2rem;
+  font-size: 22px;
+}
+.center {
+  width: 200px;
+  height: 79px;
+  position: relative;
+  top: -5.8px;
+  margin-top: 5px;
+  margin-left: -50px;
+}
+.e-mail {
+  background-color: white;
+  border-top: 10px solid white;
+  border-style: solid;
+  border-color: white;
+  border-bottom: white 2.4px solid;
+
+  padding-left: 0.5em;
+  width: 650px;
+  height: 66px;
+  position: static;
+  top: 64.6%;
+  left: 500px;
+
+  margin-top: 20px;
+  margin-left: 52px;
+  outline: none;
+
+  border-radius: 4px;
+  font-size: 28px;
+}
+.content form {
+  margin-bottom: 1em;
+}
+#card-0 {
+  display: grid;
+  grid-template-columns: 50% 52%;
+  align-items: center;
+  border-bottom: #222 solid 8px;
+}
+.desc {
+  left: 25%;
+  position: relative;
+}
+.desc p {
+  font-size: 28px;
+  line-height: 1.2em;
+  margin-top: -0.5em;
+}
+#card-0 .media {
+  position: relative;
+  top: 25%;
+  left: 20%;
+  margin: -90px 0;
+  margin-bottom: 20px;
+}
+#card-0 video {
+  position: relative;
+  height: 189.4px;
+  top: -278px;
+  right: -7%;
+  z-index: -1;
+}
+#card-1 {
+  display: grid;
+  grid-template-columns: 50% 42%;
+  align-items: center;
+  border-bottom: #222 solid 8px;
+}
+#card-2 {
+  padding: 300px 0;
+  border-bottom: #222 solid 8px;
+}
+#card-2 video {
+  float: left;
+  position: relative;
+  top: -150px;
+  padding-left: 5em;
+}
+#card-3 {
+  padding: 300px 0;
+  border-bottom: #222 solid 8px;
 }
