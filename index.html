@@ -8,11 +8,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <link href="/style.css" type="text/CSS" rel="stylesheet" />
   </head>
-  <body>
+  <body onresize="getLeft()" onload="getLeft()">
     <header class="showcase">
       <div class="top">
         <img src="/Resources/Netflix.png" alt="Netflix" />
-        <a href="#"><button class="button button-sign">Sign In</button></a>
+        <a href="#"><button class="button-sign">Sign In</button></a>
+        <select name="language" id="language-top">
+          <option value="english" style="background-color: #333">English</option>
+          <option value="indonesia" style="background-color: #333">Bahasa Indonesia</option>
+        </select>
       </div>
       <div class="content">
         <h1>
@@ -23,10 +27,12 @@
           <span class="break">Watch anywhere. Cancel anytime.<br /></span>
           Ready to watch? Enter your email to create or restart your membership.
         </p>
-        <input type="email" id="e-mail" name="e-mail" class="e-mail" placeholder="Email address" />
-        <a href="#"
-          ><button class="button button-gs center">Get Started <i class="fas fa-chevron-right"></i></button
-        ></a>
+        <div class="search">
+          <input type="email" id="e-mail" name="e-mail" placeholder="Email address" />
+          <a href="#"
+            ><button class="button-gs">Get Started <i class="fas fa-chevron-right"></i></button
+          ></a>
+        </div>
       </div>
     </header>
     <section id="card-0">
@@ -38,16 +44,25 @@
           more.
         </p>
       </div>
-      <div class="media">
-        <img src="/Resources/tv.png" style="width: 458px; height: 345px" />
-        <video controls autoplay loop>
+      <div id="tv_container">
+        <video controls autoplay loop muted>
           <source src="/Resources/Vid Card-0.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
       </div>
     </section>
     <section id="card-1">
-      <div class="media"></div>
+      <div>
+        <figure>
+          <img class="img-mobile" src="Resources/mobile.jpg" style="width: 505px; height: 379px" />
+          <div>
+            <figcaption>
+              <img class="floatleft" src="/Resources/stranger-things.png" style="width: 57.14px; height: 80px" />
+              <span>Stranger Things<br /><span class="text-blue">Downloading...</span></span>
+              <img class="floatright" src="/Resources/download-icon.gif" style="width: 48px; height: 48px" />
+            </figcaption>
+          </div>
+        </figure>
+      </div>
       <div class="desc">
         <h1>
           Download your shows <br />
@@ -60,11 +75,108 @@
       </div>
     </section>
     <section id="card-2">
-      <video controls autoplay loop>
-        <source src="/Resources/Vid Card-2.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div class="desc">
+        <h1>Watch everywhere</h1>
+        <p>
+          Stream unlimited movies and TV shows on <br />
+          your phone, tablet, laptop, and TV.
+        </p>
+      </div>
+      <div id="device-pile">
+        <video controls autoplay loop muted>
+          <source src="/Resources/Vid Card-2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </section>
-    <section id="card-3"><img src="/Resources/Card-3.png" /></section>
+    <section id="card-3">
+      <div class="media">
+        <img src="/Resources/Card-3.png" style="width: 504px; height: 378px" />
+      </div>
+      <div class="desc">
+        <h1>Create profiles for kids.</h1>
+        <p>
+          Send kids on adventures with their favorite <br />
+          characters in a space made just for them—<br />
+          free with your membership.
+        </p>
+      </div>
+    </section>
+    <section id="faq">
+      <h1>Frequently Asked Questions</h1>
+      <div class="dropdown">
+        <ul>
+          <a class="tab noselect" id="tab-1" onclick="showhide(this.id)"><li>What is Netflix?</li></a>
+          <p class="tab-par" id="item-1">
+            Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices. <br /><br />
+            You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!
+          </p>
+          <a class="tab noselect" id="tab-2" onclick="showhide(this.id)"><li>How much does Netflix cost?</li></a>
+          <p class="tab-par" id="item-2">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from IDR54,000 to IDR186,000 a month. No extra costs, no contracts.</p>
+          <a class="tab noselect" id="tab-3" onclick="showhide(this.id)"><li>Where can I watch?</li></a>
+          <p class="tab-par" id="item-3">
+            Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs,
+            smartphones, tablets, streaming media players and game consoles.<br /><br />
+
+            You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+          </p>
+          <a class="tab noselect" id="tab-4" onclick="showhide(this.id)"><li>How do I cancel?</li></a>
+          <p class="tab-par" id="item-4">Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+          <a class="tab noselect" id="tab-5" onclick="showhide(this.id)"><li>What can I watch on Netflix?</li></a>
+          <p class="tab-par" id="item-5">Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+          <a class="tab noselect" id="tab-6" onclick="showhide(this.id)"><li>Is Netflix good for kids?</li></a>
+          <p class="tab-par" id="item-6">
+            The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space. <br /><br />
+
+            Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.
+          </p>
+        </ul>
+      </div>
+      <div class="desc-bot">
+        <p>Ready to watch? Enter your email to create or restart your membership.</p>
+      </div>
+      <div class="search">
+        <input type="email" id="e-mail" name="e-mail" placeholder="Email address" />
+        <a href="#"
+          ><button class="button-gs">Get Started <i class="fas fa-chevron-right"></i></button
+        ></a>
+      </div>
+    </section>
+    <footer>
+      <p class="footer-p">Questions? Call 007-803-321-2130</p>
+      <div class="flex-container">
+        <ul class="row">
+          <li><a id="demo" href="#">FAQ</a></li>
+          <li><a href="#">Investor Relations</a></li>
+          <li><a href="#">Ways to Watch</a></li>
+          <li><a href="#">Corporate Information</a></li>
+          <li><a href="#">Only on Netflix</a></li>
+        </ul>
+        <ul class="row">
+          <li><a href="#"></a>Help Center</li>
+          <li><a href="#"></a>Jobs</li>
+          <li><a href="#"></a>Terms of Use</li>
+          <li><a href="#"></a>Contact Us</li>
+        </ul>
+        <ul class="row">
+          <li><a href="#"></a>Account</li>
+          <li><a href="#"></a>Redeem Gift Cards</li>
+          <li><a href="#"></a>Privacy</li>
+          <li><a href="#"></a>Speed Test</li>
+        </ul>
+        <ul class="row">
+          <li><a href="#"></a>Media Center</li>
+          <li><a href="#"></a>Buy Gift Cards</li>
+          <li><a href="#"></a>Cookie Preferences</li>
+          <li><a href="#"></a>Legal Notices</li>
+        </ul>
+      </div>
+      <select name="language" id="language-bot">
+        <option value="english" style="background-color: #333">English</option>
+        <option value="indonesia" style="background-color: #333">Bahasa Indonesia</option>
+      </select>
+      <p class="footer-p" id="netflix-bot">Netflix Indonesia</p>
+    </footer>
   </body>
+  <script type="text/JavaScript" src="/script.js"></script>
 </html>

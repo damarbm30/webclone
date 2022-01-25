@@ -22,8 +22,8 @@ ul {
   list-style: none;
 }
 h1 {
-  font-size: 48px;
-  margin-bottom: 2rem;
+  font-size: 60px;
+  margin-bottom: 1rem;
 }
 p {
   margin: 0.5rem 0;
@@ -32,7 +32,8 @@ p {
 }
 .break {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 24px;
 }
 img {
   width: 15%;
@@ -41,11 +42,10 @@ img {
 .top {
   position: relative;
   color: black;
+  margin-bottom: -3em;
 }
 .top a {
   padding-top: 1.4rem;
-  /* position: absolute; */
-  display: inline-block;
   float: right;
   padding-right: 1.5rem;
 }
@@ -55,24 +55,27 @@ img {
   min-height: 75px;
   min-width: 160px;
 }
-.content {
-  padding-top: 1rem;
-  text-align: center;
-  line-height: 50px;
-  /* height: 100vh; */
-}
 .showcase {
   background: url("/Resources/Background.jpg") center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("/Resources/Background.jpg") center/cover;
   width: 100%;
-  height: 100vh;
-  /* position: relative; */
+  z-index: -1;
 }
-.button:hover {
+#language-top {
+  margin-top: 1.4rem;
+  border-radius: 4px;
+  border: white 0.8px solid;
+  background-color: transparent;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  float: right;
+  position: relative;
+  margin-right: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.button-sign {
   cursor: pointer;
-  background-color: #ff535c;
-}
-.button {
   background-color: #e50914;
   border: none;
   color: white;
@@ -81,97 +84,320 @@ img {
   width: auto;
   box-shadow: 0 0.1px 0 rgba(0, 0, 0, 0.45);
   transition: 0.5s;
-}
-.button-sign {
   margin-right: 1rem;
   font-size: 16px;
   padding: 0.4rem 1.2rem;
   margin-top: -0.1em;
 }
-.button-gs {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  padding: 0 2rem;
-  font-size: 22px;
+.button-sign:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
-.center {
-  width: 200px;
-  height: 79px;
-  position: relative;
-  top: -5.8px;
-  margin-top: 5px;
-  margin-left: -50px;
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 92vh;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
-.e-mail {
-  background-color: white;
-  border-top: 10px solid white;
-  border-style: solid;
-  border-color: white;
-  border-bottom: white 2.4px solid;
-
-  padding-left: 0.5em;
-  width: 650px;
-  height: 66px;
-  position: static;
-  top: 64.6%;
-  left: 500px;
-
+/* search and get started button */
+.search {
   margin-top: 20px;
-  margin-left: 52px;
-  outline: none;
-
-  border-radius: 4px;
-  font-size: 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+.search input {
+  background-color: white;
+  outline: none;
+  border: none;
+  font-size: 22px;
+  padding: 0px 10px 0 0;
+  text-indent: 12px;
+  min-width: 450px;
+  height: 60px;
+  align-items: center;
+}
+.button-gs {
+  cursor: pointer;
+  background: #e50914;
+  border: none;
+  color: white;
+  border-radius: 0 2px 2px 0;
+  border-color: white;
+  padding: 16px 1rem;
+  padding-top: 16.6px;
+  padding-bottom: 16.2px;
+  width: auto;
+  box-shadow: 0 0.1px 0 rgba(0, 0, 0, 0.45);
+  transition: 0.5s;
+  font-size: 24px;
+}
+.button-gs:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/* search and get started button end */
 .content form {
   margin-bottom: 1em;
 }
 #card-0 {
   display: grid;
-  grid-template-columns: 50% 52%;
+  grid-template-columns: auto auto;
   align-items: center;
   border-bottom: #222 solid 8px;
+  padding: 10px;
 }
-.desc {
+#card-0 .desc,
+#card-2 .desc {
+  padding-left: 8em;
   left: 25%;
-  position: relative;
 }
 .desc p {
   font-size: 28px;
   line-height: 1.2em;
   margin-top: -0.5em;
 }
-#card-0 .media {
+#tv_container {
+  /* Adjust TV image width */
+  width: 550px;
+  /* Adjust TV image height */
+  height: 480px;
   position: relative;
-  top: 25%;
-  left: 20%;
-  margin: -90px 0;
-  margin-bottom: 20px;
+  padding-bottom: 4em;
+  padding-right: 6em;
 }
-#card-0 video {
-  position: relative;
-  height: 189.4px;
-  top: -278px;
-  right: -7%;
+#tv_container:after {
+  content: "";
+  display: block;
+  background: url("/Resources/tv.png") no-repeat top left transparent;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#tv_container video {
+  position: absolute;
+  /* Adjust top position */
+  top: 101px;
+  /* Adjust left position */
+  left: 58px;
   z-index: -1;
+  width: 518px;
+  height: 260px;
+}
+video {
+  width: 63%;
+  height: auto;
 }
 #card-1 {
   display: grid;
-  grid-template-columns: 50% 42%;
+  grid-template-columns: auto auto;
   align-items: center;
   border-bottom: #222 solid 8px;
+  padding: 0px 0;
+}
+figure {
+  display: inline-block;
+  /* adjust as needed */
+  margin: 5px 190px;
+}
+figure img {
+  margin-bottom: -100px;
+  margin: 0 -100px;
+  padding: 0 20px;
+}
+.floatleft {
+  float: left;
+  padding-left: 105px;
+  padding-top: 5px;
+}
+.floatright {
+  float: right;
+  padding-right: 110px;
+  padding-top: 22px;
+}
+figure figcaption {
+  text-align: justify;
+  background-color: black;
+  border: 2px solid #333;
+  border-radius: 8px;
+  text-indent: 50px;
+  line-height: 90px;
+  height: 90px;
+  position: relative;
+  top: -120px;
+}
+span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 18px;
+}
+.text-blue {
+  color: blue;
+}
+.caption-break {
+  line-height: -100px;
+  margin-top: -100px;
+  color: blue;
+}
+#card-1 .img-mobile {
+  z-index: -1;
+  width: 100%;
 }
 #card-2 {
-  padding: 300px 0;
+  display: grid;
+  grid-template-columns: auto auto;
   border-bottom: #222 solid 8px;
+  align-items: center;
 }
-#card-2 video {
-  float: left;
+#device-pile {
+  /* height: 500px;
+  width: 400px; */
   position: relative;
-  top: -150px;
-  padding-left: 5em;
+  right: 20%;
+  top: 10%;
+  padding-bottom: 3em;
+}
+#device-pile::after {
+  content: "";
+  display: block;
+  background: url("/Resources/device-pile-id.png") no-repeat top left transparent;
+  background-size: contain;
+  padding: 210px;
+  padding-right: 8em;
+}
+#device-pile video {
+  position: absolute;
+  /* Adjust top position */
+  top: 50px;
+  /* Adjust left position */
+  left: 98px;
+  /* min-width: 349px;
+  min-height: 197px; */
+  width: 349.3px;
+  height: 197.68px;
+  background-size: contain;
+  z-index: -100;
+  overflow: hidden;
 }
 #card-3 {
-  padding: 300px 0;
+  display: grid;
+  grid-template-columns: 50% 42%;
   border-bottom: #222 solid 8px;
+  align-items: center;
+}
+#card-3 img {
+  margin-left: 100px;
+  padding: 80px 0;
+}
+#faq {
+  border-bottom: #222 solid 8px;
+}
+#faq h1 {
+  text-align: center;
+  padding: 25px 0;
+  padding-top: 50px;
+}
+.dropdown {
+  align-items: center;
+  /* Make list on specific wide */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tab {
+  cursor: pointer;
+  background: #303030;
+  padding: 20px 30px;
+  padding-right: 340px;
+  /* Make all box the same size */
+  display: flex;
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.tab-par {
+  display: none;
+  background: #303030;
+  padding: 20px 30px;
+  text-align: left;
+  line-height: 30px;
+  max-width: 660.73px;
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+  margin-top: -4px;
+}
+.desc-bot {
+  justify-content: center;
+  text-align: center;
+  margin-top: 4rem;
+}
+#faq .search {
+  margin-bottom: 4rem;
+}
+#faq .search .button-gs {
+}
+footer {
+  color: #757575;
+  margin: 0 10px;
+  padding-top: 1em;
+}
+footer p {
+  font-size: 1em;
+  padding: 1em 0 0.5em 0;
+}
+footer ul li {
+  margin: 5px 50px;
+  font-size: 13px;
+}
+footer ul li a {
+  color: inherit;
+  font-size: inherit;
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}
+footer p {
+  justify-content: center;
+  align-content: center;
+  position: static;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+#language-bot {
+  color: #999;
+  border-radius: 4px;
+  border: white 0.8px solid;
+  background-color: transparent;
+  padding: 0.4rem 0.8rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0 0 0;
+}
+#netflix-bot {
+  font-size: 13px;
 }
