@@ -325,10 +325,7 @@ span {
   /* margin-left: 100px; */
   padding: 80px 0;
 }
-#card-3 .media img {
-  max-width: 300px;
-  max-height: 150px;
-}
+
 #faq {
   border-bottom: #222 solid 8px;
 }
@@ -400,7 +397,7 @@ footer p {
   align-content: center;
   position: static;
 }
-.flex-container {
+/* .flex-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -409,8 +406,8 @@ footer p {
 .row {
   display: flex;
   flex-direction: column;
-}
-/* .flex-container ul {
+} */
+.flex-container ul {
   display: table;
   margin: 0 auto;
   width: 800px;
@@ -421,7 +418,7 @@ footer p {
   float: left;
   margin: 8px 10px;
   width: 150px;
-} */
+}
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -741,7 +738,13 @@ footer p {
     margin-top: 0.1em;
   }
   .floatright {
-    margin-top: -0.65em;
+    margin-top: -0.8em;
+    margin-right: 5px;
+    padding-right: 0px;
+    padding-top: 22px;
+  }
+  #card-1 div figure {
+    margin: 5px 100px;
   }
   #card-1 .img-mobile {
     z-index: -1;
@@ -756,10 +759,45 @@ footer p {
     left: -7em;
     top: -90px;
   }
+  footer {
+    margin-left: -140px;
+    padding-right: -20em;
+  }
+  .flex-container ul {
+    margin: 0 auto;
+    width: 320px;
+    padding-left: 10em;
+    position: static;
+  }
+  .flex-container ul li {
+    float: left;
+    margin: 8px 10px;
+    width: 130px;
+  }
+  .footer-p,
+  #language-bot {
+    margin-left: 9.5em;
+  }
+  #language-bot {
+    position: relative;
+    left: 26.5%;
+  }
+  #netflix-bot {
+    margin-left: 11.5em;
+  }
+  #card-3 .media img {
+    max-width: 300px;
+    max-height: 150px;
+  }
 }
-@media (max-width: 360px) {
+
+@media (max-width: 376px) {
   .tab {
     padding: 20px 15px;
     font-size: 1.2rem;
+  }
+  #language-bot {
+    position: relative;
+    left: 29.5%;
   }
 }
