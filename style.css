@@ -53,7 +53,7 @@ img {
   min-width: 160px;
 }
 .showcase {
-  background: url("/Resources/Background.jpg") center/cover;
+  background: url("Resources/Background.jpg") center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("/Resources/Background.jpg") center/cover;
   width: 100%;
   z-index: -1;
@@ -200,7 +200,7 @@ img {
 #tv_container::after {
   content: "";
   display: block;
-  background: url("/Resources/tv.png") no-repeat top transparent;
+  background: url("Resources/tv.png") no-repeat top transparent;
   background-size: contain;
 
   padding: 210px;
@@ -290,7 +290,7 @@ span {
 #device-pile::after {
   content: "";
   display: block;
-  background: url("/Resources/device-pile-id.png") no-repeat top transparent;
+  background: url("Resources/device-pile-id.png") no-repeat top transparent;
   background-size: contain;
   padding: 210px;
   padding-right: 8em;
