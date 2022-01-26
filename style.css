@@ -54,10 +54,10 @@ img {
 }
 .showcase {
   /* background: url("Resources/Background.jpg") center/cover; */
-  background-image: url("Resources/Background.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("Resources/Background.jpg");
   background-position: center;
   background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("/Resources/Background.jpg") center/cover;
+
   width: 100%;
   z-index: -1;
 }
