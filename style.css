@@ -366,8 +366,6 @@ span {
 #faq .search {
   margin-bottom: 4rem;
 }
-#faq .search .button-gs {
-}
 footer {
   color: #757575;
   margin: 0 10px;
@@ -494,8 +492,6 @@ footer p {
     /* height: auto; */
     position: relative;
     top: 10%;
-  }
-  #tv_container::after {
   }
   #tv_container video {
     width: 250px;
