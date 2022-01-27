@@ -832,11 +832,15 @@ footer p {
     font-size: 1.2rem;
     max-width: 247.73px;
   }
+  #language-bot {
+    position: relative;
+    left: 150px;
+  }
 }
 @media (max-width: 376px) {
   #language-bot {
     position: relative;
-    left: 29.5%;
+    left: 150px;
   }
 }
 @media (max-width: 340px) {
@@ -854,6 +858,6 @@ footer p {
   }
   #language-bot {
     position: relative;
-    left: 31.8%;
+    left: 150px;
   }
 }
