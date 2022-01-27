@@ -567,8 +567,13 @@ footer p {
 }
 @media (max-width: 740px) {
   .tab {
-    padding: 20px 15px;
-    font-size: 1.4rem;
+    padding: 20px 30px;
+    font-size: 1.7rem;
+  }
+  .tab-par {
+    padding: 20px 20px;
+    font-size: 1.2rem;
+    max-width: 370.73px;
   }
   #card-1 .img-mobile {
     z-index: -1;
@@ -817,11 +822,18 @@ footer p {
     max-height: 200px;
   }
 }
-@media (max-width: 376px) {
+@media (max-width: 420px) {
   .tab {
     padding: 20px 15px;
     font-size: 1.2rem;
   }
+  .tab-par {
+    padding: 20px 15px;
+    font-size: 1.2rem;
+    max-width: 247.73px;
+  }
+}
+@media (max-width: 376px) {
   #language-bot {
     position: relative;
     left: 29.5%;
